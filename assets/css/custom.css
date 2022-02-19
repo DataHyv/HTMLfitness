@@ -27,14 +27,15 @@ img.nav-brand {
 }
 
 .navbar-custom {
+  /* background: rgba(78, 78, 78, 0.7); */
   background: rgba(78, 78, 78, 0.7);
 }
 /*end navbar */
 
 /*--------------------------------------------------------------
-# Header
+# Home Header
 --------------------------------------------------------------*/
-header {
+.home-header {
   position: relative;
   background-color: black;
   height: 74vh;
@@ -43,7 +44,7 @@ header {
   overflow: hidden;
 }
 
-header video {
+.home-header video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,12 +59,12 @@ header video {
   transform: translateX(-50%) translateY(-50%);
 }
 
-header .container {
+.home-header .container {
   position: relative;
   z-index: 2;
 }
 
-header .overlay {
+.home-header .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,19 +80,27 @@ header .overlay {
   border-left-color: #000000;
   text-shadow: -3px 1px #ff0000, 3px -1px #00ffff;
   letter-spacing: 9px;
+  font-weight:900;
 }
+
+.masthead-down {
+  font-size: 2.5rem;
+  font-weight:bold;
+  color: #0ea2bd; 
+}
+
 
 /* Media Query for devices withi coarse pointers and no hover functionality */
 
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
 
 @media (pointer: coarse) and (hover: none) {
-  header {
+  .home-header {
     /* background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll; */
     background: url('https://images.unsplash.com/photo-1516398810565-0cb4310bb8ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80')black no-repeat center fixed;
   }
 
-  header video {
+  .home-header video {
     display: none;
   }
 }
@@ -194,13 +203,17 @@ section {
   margin-bottom: 0;
 }
 
-/* header.masthead {
+/*--------------------------------------------------------------
+# About us header
+--------------------------------------------------------------*/
+header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
+  padding-top: calc(15rem + 78px);
   padding-bottom: 7rem;
-  background: linear-gradient(0deg, rgba(255, 251, 0, 0.3), rgba(0, 0, 0, 0.5)),url("../../assets/img/header.jpg") center / cover no-repeat;
+  background: linear-gradient(0deg, rgba(14, 162, 189, 0.3), rgba(0, 0, 0, 0.5)),url("../../assets/img/undraw_about_us.svg") center / cover no-repeat;
   letter-spacing: 0px;
+  background-size: contain;
 }
 
 header.masthead .masthead-content .masthead-up {
@@ -292,7 +305,7 @@ p.lead {
     font-size: 20px;
   }
 
-} */
+}
 
 /* ------------------------------------
 -------------- signup page -----------------
